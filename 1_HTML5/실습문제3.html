@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제3</title>
+    <h1>회원가입</h1>
+</head>
+<body>
+    <fieldset>
+        <legend>필수 입력사항</legend>
+        <table>
+            <tr>
+                <th>ID</th>
+                <td><input type="text" placeholder="아이디 10글자 이내"size="30"></td>
+                <td><button>중복 확인</button></td>
+            </tr>
+            <tr>
+                <th>비밀번호</td>
+                <td colspan="2"><input type="password" placeholder="영문,숫자,특수문자 포함 8자 이상" size="40"></td>
+            </tr>
+            <tr>
+                <th>비밀번호 확인</th>
+                <td colspan="2"></span><span> <input type="password" size="40"></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><input type="email"size="30"></td>
+                <td><select>
+                    <option>직접입력</option></span>
+                    <option>naver.com</option>
+                    <option>gmail.com</option>
+                    <option>hanmail.net</option>
+                    <option>daum.net</option>   
+                </select></td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>추가 정보</legend>  
+        프로필 사진 <input type="file"><br><br>
+        성별 :<label for="male">남자</label>
+        <input type="radio" id="male" name="gender" value="M" checked>
+        <label for="female">여자</label>
+        <input type="radio" id="female" name="gender" value="F"><br><br>
+        생년월일 : <input type="date"><br><br>
+        취미<br>
+        <input type="checkbox">야구
+        <input type="checkbox">농구
+        <input type="checkbox">축구<br>
+        <input type="checkbox" checked>공부
+        <input type="checkbox">음악감상<br>
+        <input type="checkbox">기타<input type="text" ><br><br>
+        자기소개<br>
+        <textarea name="introduce" id="introduce" cols="80" rows="10"style="resize:none"></textarea>
+    </fieldset><br>
+    <button>회원가입</button> <button>다시입력</button> <button>이전으로</button>
+</body>
+</html>

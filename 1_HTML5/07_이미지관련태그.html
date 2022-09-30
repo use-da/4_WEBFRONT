@@ -5,18 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>07_이미지 관련 태그</title>
+    <style>
+        div{
+            border: 1px solid black;
+            background-color: #f0f0f0;
+            width: 1000px;
+            height: 300px;
+        }
+    </style>
 </head>
 <body>
     <h1>이미지 관련 태그(img)</h1>
     <pre>
         -웹 문서에 사진이나 그림 같은 이미지를 삽입하는 용도의 태그
         -img태그는 내용이 없으므로 종료태그X
+        -img태그는 inline형식
         [속성]
         1)src : 삽입할 이미지 파일의 경로, 웹 주소를 지정하는 속성
-        2)alt : 이미지를 설명하는 속성
-                *이미지가 표시되지 않을 때 대체 텍스트
-                *웹 접근성(시각장애인)
-        3)width/height : 이미지의 가로/세로 크기 지정하는 속성
+        2)width/height : 이미지의 가로/세로 크기 지정하는 속성
+        3)alt : 이미지를 설명하는 속성
+                -이미지가 표시되지 않을 때 대체 텍스트
+                -웹 접근성(시각장애인)
+        
     </pre>
     <h3>src 속성</h3>
     <h4>웹 주소를 이용한 이미지 출력</h4>
@@ -46,5 +56,47 @@
     <hr> 
     <h3>alt 속성</h3>
     <img src="../images/flowers/flower1.jpg" alt="빨간 꽃">
+    <hr>
+    <h3>width/height 속성</h3>
+    <pre>
+        -고정 크기 단위 : 화면 크기와 관계 없이 항상 지정된 크기 값을 갖는 단위
+                         이미지가 손상되지 않는다
+        ex) px, pt 
+
+        -가변 크기 단위 : 화면이나 영역에 따라 크기가 변하는 단위
+        ex) %, em, rem
+    </pre>
+    <h4>고정 크기 단위(px)</h4>
+    <img src="../images/dogs/dog1.jpg" width="300px" height="240px">
+    <img src="../images/dogs/dog2.jpg" width="300px" height="240px">
+    <img src="../images/dogs/dog3.jpg" width="300px" height="240px">
+    <img src="../images/dogs/dog4.jpg" width="300px" height="240px">
+    <img src="../images/dogs/dog5.jpg" width="300px" height="240px">
+
+    <div>
+        <img src="../images/dogs/dog1.jpg" width="300px" height="240px">
+        <img src="../images/dogs/dog2.jpg" width="300px" height="240px">
+        <img src="../images/dogs/dog3.jpg" width="300px" height="240px">
+        <img src="../images/dogs/dog4.jpg" width="300px" height="240px">
+    </div>
+    <hr>
+    <h4>가변 크기 단위(%)</h4>
+    <img src="../images/flowers/flower1.jpg" width="15%" height="240px">
+    <img src="../images/flowers/flower2.jpg" width="15%" height="240px">
+    <img src="../images/flowers/flower3.jpg" width="15%" height="240px">
+    <img src="../images/flowers/flower4.jpg" width="15%" height="240px">
+    <img src="../images/flowers/flower5.jpg" width="15%" height="240px">
+    <div>
+        <img src="../images/cats/cat1.jpg" width="24%" height="50%">
+        <img src="../images/cats/cat2.jpg" width="24%" height="50%">
+        <img src="../images/cats/cat3.jpg" width="24%" height="50%">
+        <img src="../images/cats/cat4.jpg" width="24%" height="50%">
+
+        <img src="../images/cats/cat1.jpg" width="24%" height="50%">
+        <img src="../images/cats/cat2.jpg" width="24%" height="50%">
+        <img src="../images/cats/cat3.jpg" width="24%" height="50%">
+        <img src="../images/cats/cat4.jpg" width="24%" height="50%">
+    </div>
+
 </body>
 </html>
