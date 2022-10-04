@@ -29,6 +29,52 @@
     <div id="test2">
         <p>자식1</p>
         <pre>자식2</pre>
+        <!--<p>자식3</p>-->
     </div>  
+
+    <h3>:empty</h3>
+    <pre>
+        자식 노드가 없는 요소를 선택
+        -노드의 개념 : 태그, 글자, 띄어쓰기, 주석
+    </pre>
+    <div id="test3">
+        <p>
+            <strong>테스트1</strong>
+        </p>
+        <p>테스트2</p>
+        <p>         </p>
+        <p></p>
+    </div>
+
+    <hr>
+    <h1>선택자 추가 작성법</h1>
+    <h3>여러 선택자 동시 작성</h3>  
+    <pre>
+        같은 스타일을 적용하고자 하는 요소들을 쉼표로 구분하여 작성
+        선택자1, 선택자2, 선택자3 { CSS 코드;}
+    </pre>
+
+    <div id="test4">테스트1</div>
+        <p name="test4">테스트2</p>
+        <pre class="test4">테스트3</pre>
+
+    <hr>
+    <h3>특정 요소 내부에 있는 특정 클래스만 선택</h3>
+    <!--ul#test5>li*5.test5{$}-->
+    <ul id="test5">
+        <li class="test5">1</li>
+        <li class="test5">2</li>
+        <li class="test5">3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <hr>
+    <h3>클래스가 여러개인 요소 선택하는 방법</h3>
+    <pre>
+        클래스가 여러개인 요소를 선택할 때 클래스 선택자를 띄어쓰기 없이 작성(순서 상관X)
+        </pre>  
+    <div class="test6">테스트</div>
+    <div class="test6 c6">테스트</div>
+    <div class="c6">테스트</div>
 </body>
 </html>

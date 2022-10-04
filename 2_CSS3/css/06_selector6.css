@@ -1,0 +1,25 @@
+
+/*4순위 : 클래스 선택자*/
+.box{
+    background-color: green ;
+}  /*배경색은 우선순위에 의해 green으로 변하지만 CSS속성이 겹치지 않는
+    width, height는 그대로 반영*/
+
+/*5순위 : 태그 선택자*/
+div{
+    width: 200px;
+    height: 200px;
+    background-color: red !important; /*1순위 : !important*/
+}   /*개발자도구-Elements-Style에서 껐다켰다 확인*/
+    /* !important : 우선순위를 무시하고 적용*/
+
+.box{
+    background-color: pink ;
+}   /*동일 선택자 CSS속성은 마지막 설정값이 적용된다*/
+
+/*3순위 : 아이디 선택자*/
+#test1{
+    background-color: black;
+    color:white;
+    height: 100px;
+}
