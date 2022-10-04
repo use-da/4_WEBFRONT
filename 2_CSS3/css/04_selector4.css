@@ -1,0 +1,96 @@
+/*일반 구조 선택자*/
+/*
+    :first-child : 형제 관계 요소 중 첫번째 요소
+    :last-child : 형제 관계 요소 중 마지막 요소
+    :nth-child(n 또는 수열) : 형제 관계 요소 중 n번째 요소 또는 모든 수열 번째 요소
+    :nth-last-child(n 또는 수열) : 형제 관계 요소 중 뒤에서 n번째 요소
+                                또는 뒤에서부터 모든 수열 번째 요소
+*/
+
+/* :first-child : 형제 관계 요소 중 첫번째 요소*/
+#test1>p:first-child{
+    background-color: red;
+    color: white;
+}
+
+/* :last-child : 형제 관계 요소 중 마지막 요소*/
+#test1>p:last-child{
+    background-color: blue;
+    color: white;
+}  /*마지막이 <pre>이므로 선택되지 않는다*/
+
+/* :nth-child(n 또는 수열) : 형제 관계 요소 중 n번째 요소 또는 모든 수열 번째 요소*/
+#test1>p:nth-child(2){
+    background-color: yellow;
+    color: white;
+}   /*#test1의 자식 요소 중 2번째 자식이 p태그일 때 선택*/
+
+#test1>p:nth-child(4){
+    background-color: green;
+    color: white;
+}   /*#test1의 자식 요소 중 4번째 자식이 p태그일 때 선택*/
+
+#test1>*:nth-child(6){
+    background-color: orange;
+    color: white;
+}   /*#test1의 자식 요소 중 6번째 자식이 있으면 선택*/
+
+#test1>p:nth-child(2n+3){
+    border: 3px solid black;
+}   /*n은 0부터 시작*/
+
+#test1>p:nth-child(2n){
+    font-size: 30px;
+}
+
+/* :nth-last-child(n 또는 수열) : 형제 관계 요소 중 뒤에서 n번째 요소
+                                또는 뒤에서부터 모든 수열 번째 요소*/
+#test1>p:nth-last-child(2){
+    color: aqua;
+    font-weight: bold;
+}   /*#test1의 자식 요소 중 뒤에서 2번째 자식이 p태그일 때 선택*/
+
+/*---------------------------------------------------------------------*/
+
+/* 형태 구조 선택자*/
+/*
+    :first-of-type : 선택된 형제 관계 요소 중 첫번째 요소
+    :last-of-type : 선택된 형제 관계 요소 중 마지막 요소
+    :nth-of-type(n 또는 수열) : 선택된 형제 관계 요소 중 n번째 요소 또는 모든 수열 번째 요소
+    :nth-last-of-type(n 또는 수열) : 선택된 형제 관계 요소 중 뒤에서 n번째 요소
+                                또는 뒤에서부터 모든 수열 번째 요소
+    
+    *을 작성하는 경우 각각의 요소 종류 별로 수열이 적용된다
+                                */
+
+
+/* :first-of-type : 선택된 형제 관계 요소 중 첫번째 요소*/
+#test2 > p:first-of-type{
+    background-color: red;
+}
+
+/* :last-of-type : 선택된 형제 관계 요소 중 마지막 요소*/
+#test2 > p:last-of-type{
+    background-color: skyblue;
+    color: white;
+}
+
+/* :nth-of-type(n 또는 수열) : 선택된 형제 관계 요소 중 n번째 요소 또는 모든 수열 번째 요소*/
+#test2 > p:nth-of-type(2n){
+    border: 1px solid red;
+}
+
+/* :nth-last-of-type(n 또는 수열) : 선택된 형제 관계 요소 중 뒤에서 n번째 요소
+                                또는 뒤에서부터 모든 수열 번째 요소*/
+#test2 > *:nth-last-of-type(n+1){
+    border: 3px solid blue;
+} /* nth of type 에 *을 작성하는 경우 각각의 요소 종류 별로 수열이 적용된다*/
+
+/*---------------------------------------------------------------------*/
+
+/*부정 선택자*/
+
+#test3 > li:not(:nth-of-type(3n)){
+    background-color: purple;
+    color: white;
+}

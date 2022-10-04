@@ -1,0 +1,4 @@
+/*:only-child*/
+#test1>p:only-child{
+    background-color: steelblue;
+}  /*#test1 자식이 하나 밖에 없고 그 요소가 p태그일 때 선택*/
