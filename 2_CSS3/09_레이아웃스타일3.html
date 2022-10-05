@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃스타일3</title>
+    <link rel="stylesheet" href="css/09_layout3.css">
+</head>
+<body>
+    <h1>요소 정렬 스타일(float / clear)</h1>
+    <pre>
+        float : 요소를 띄워서 좌우로 정렬하는 속성
+
+        clear : float로 띄워져 있는 상태를 해제하는 속성
+            (float 사용 시 겹침 문제가 발생하는데 이를 해결하기 위해 사용)
+    </pre>
+    <h3>기본 형태</h3>
+    <div class="test">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>Hello</div>
+        <div>World</div>
+        <div>5</div>
+    </div>
+    <hr>
+    <h3>float : left</h3>
+    <div class="test">
+        <div class="left">1</div>
+        <div class="left">2</div>
+        <div class="left">3</div>
+        <div class="left">4</div>
+        <div class="clear">Hello</div>
+        <div>World</div>
+        <div class="left">5</div>
+        <div class="left">6</div>
+    </div>
+
+    <hr>
+    <h3>float : right</h3>
+    <div class="test">
+        <div class="right">1</div>
+        <div class="right">2</div>
+        <div class="right">3</div>
+        <div class="right">4</div>
+        <div class="clear">Hello</div>
+        <div>World</div>
+        <div class="right">5</div>
+        <div class="right">6</div>
+    </div>
+    <hr>
+    <h3>float를 이용한 좌우 2분할</h3>
+    <div class="container-1">
+        <div class="div-1 bg-1"></div>
+        <div class="div-1 bg-2"></div>
+        <div class="div-1 bg-3"></div>
+        <div class="div-1 bg-4"></div>
+    </div>
+    <hr>
+    <h3>4분할</h3>
+    <div class="container-1">
+        <div class="row-1 ">
+            <div class="col-1">
+                <img src="../images/flowers/flower3.jpg">
+            </div>
+            <div class="col-1 bg-3"></div>
+        </div>
+        <div class="row-1">
+            <div class="col-1 bg-6"></div>
+            <div class="col-1 ">
+                <img src="../images/flowers/flower4.jpg">
+            </div>
+        </div>
+    </div>
+    <pre> 틀을 먼저 고정시키고 분할하는 것이 유지보수에 좋다
+        <div>
+            <div>*4
+        </div>
+        하고 left 하는 경우 div 수정시 배치가 바뀔 수 있다
+    </pre>
+
+    
+</body>
+</html>

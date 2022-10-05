@@ -1,0 +1,107 @@
+.test{
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    background-color: rgba(255,0,0,0.3);
+
+    position:absolute;
+    left:120px;
+    top:225px;
+}
+
+.container-1{
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+
+    position:relative;
+    /*내부 작성되는 요소의 상대적인 위치의 기준이 된다*/
+}
+
+.container-1>div{
+    box-sizing: border-box;
+    border:1px solid black;
+
+    border-radius: 50%; /*10px; == 떨어진 곳부터 곡률을 주겠다*/
+    
+}
+
+.first{
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+
+    position : absolute;
+    top : 0px;
+    left : 0px;
+    z-index: 1;
+}
+
+.second{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+
+    position : absolute;
+    /*absolute 요소끼리 겹치게 된 경우 나중에 해석되는 요소가 위쪽에 자리한다*/
+    bottom : 50px;
+    right : 50px;
+    z-index: 2;
+}
+
+.third{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+    position : absolute;
+    top : 100px;
+    left : 100px;
+    z-index: 3;
+}
+
+/*요소를 정가운데에 배치
+    1) 감싸고 있는 요소가 position : relative;
+    2) 배치될 요소가      position : absolute;
+    3) 배치될 요소를 사방으로 잡아당김(top, bottom, left, right)
+    4) 배치될 요소에 margin:auto; 추가해 간격 자동조정->가운데 배치*/
+
+#center{
+    width: 50px;
+    height: 50px;
+    background-color: steelblue;
+
+    position: absolute;
+    bottom : 0;
+    right : 0;
+    top : 0;
+    left : 0;
+
+    /*다른 요소와의 상하좌우 간격을 자동으로 조정*/
+    margin: auto;
+}
+
+.fixed-area{
+    border : 1px solid black;
+    width: 100px;
+    height: 20px;
+    text-align: center; /*내부 텍스트, inline요소를 가운데 정렬*/
+    position : fixed;
+    /*absolute는 body, 감싸는 영역을 기준으로 배치
+      fixed는 화면(브라우저, 뷰포트)을 기준으로 배치*/
+    bottom: 50px;
+    right: 50px;
+}
+
+#sticky-title{
+    margin: 0; /*h1의 고유 margin 제거*/
+    background-color: blueviolet;
+    color: white;
+
+    padding : 40px 20px 20px; /*상 좌우 하*/
+
+    position: sticky;
+    top : -20px; /*스크롤바 연출 : 상40px, sticky top -20px*/
+
+    z-index: 100; /*absolute요소에 겹치지 않도록 지정*/
+}
