@@ -1,0 +1,17 @@
+.flex-container{
+    height: 75vh; /*화면의 75% 높이*/
+    display: flex;
+    flex-wrap: wrap; /*창이 줄면 item의 크기가 줄지 않고 다음 줄로 이동*/
+    align-content: flex-start;
+}
+
+
+
+/*
+vh(Viewport Height) : 브라우저 또는 화면의 높이
+
+align-content : flex-wrap이 wrap일 때, item이 포장된 한 줄을 단위로 해 cross-axis방향으로 정렬
+    속성 값은 justify-content와 동일(단 cross-axis방향으로 정렬)
+    (flex-start, flex-end, center, space-between, space-around, space-evenly)
+
+*/

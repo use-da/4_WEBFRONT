@@ -1,0 +1,78 @@
+.flex-container{
+    height: 700px;
+    background-color: #ddd;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap-reverse; 
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.item2{ padding : 10px; }
+.item3{ padding : 20px; }
+.item4{ padding : 30px; }
+
+/*      
+    item을 감싸는 요소의 형식을 flex변경
+    ->item에 자동으로 지정된 margin이 모두 사라지고
+    content + padding + border 영역만큼의 크기만 가지게 됨
+        
+    item에 width/height가 지정되어 있지 않을 경우 item의 높이는 flex-container의 너비/높이와
+    같아지게 된다.(main-axis에 따라 달라진다)
+        
+    flex-direction: 
+        -main-axis의 방향과 시작 위치를 지정하는 속성
+        -row : 가로방향(행, 기본값)
+        -row-reverse : 가로역방향
+        -column : 세로방향(열)
+        -column-reverse : 세로역방향
+        
+    flex-wrap: 
+        내부 item들을 포장하는 속성
+        flex-container를 넘어가는 경우의 처리 방법(한 줄, 여러 줄)을 지정하는 속성
+        -nowrap(기본값) : 한 줄에 모두 표시
+        -wrap : 여러 줄에 걸쳐 표시
+        -wrap-reverse : 여러 줄에 걸쳐 표시, 역순으로 표시
+        
+    flex-flow:
+        flex-direction과 flex-wrap을 한 번에 지정하는 속성
+        사용하는 이유 : flex설계시 가장 기본이 되는 속성이기 때문에 한 번에 지정하는 속성이 존재한다
+        ex) flex-flow: row wrap;
+
+    justify-content:
+        flex-container의 main-axis 방향으로 내용(item)들을 정렬하는 속성
+        -flex-start(기본값) : flex-container의 시작점을 기준으로 item들을 정렬
+        -flex-end : flex-container의 끝점을 기준으로 item들을 정렬
+        -center :  flex-container의 중앙에 item들을 정렬
+        -space-between : 시작점과 끝점에 item들을 붙이고 동일한 간격으로 정렬
+        -space-around : main-axis 방향으로 item들을 동일한 간격으로 정렬(양끝 item의 간격은 1/2배)
+        -space-evenly : main-axis 방향으로 item들이 동일한 간격으로 정렬
+
+        ex) row-reverse + flex-end -> 9 8 7 6 5 4 3 2 1 
+
+    align-items:
+        flex-container의 cross-axis 방향으로 내용(item)들을 정렬하는 속성
+        -stretch(기본값) : item에 cross-axis 방향으로의 크기 지정이 없을 경우 
+                        감싸고 있는  flex-container의 크기에 맞춰 늘리는 속성
+        -flex-start : cross-axis의 시작점을 기준으로 item들을 정렬
+        -flex-end : cross-axis의 끝점을 기준으로 item들을 정렬
+        -center : cross-axis의 중앙에 item들을 정렬
+        -baseline : item내부 content들이 한 줄에 배치되도록 정렬
+        */
+
+#con{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: row; /*기본값이라 생략가능*/
+    flex-wrap: nowrap;   /*기본값이라 생략가능*/
+    justify-content: center;
+    align-items: center;
+}
+
+#center{
+    width: 50px;
+    height: 50px;
+    background-color: coral;
+}

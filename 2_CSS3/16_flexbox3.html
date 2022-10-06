@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16. flexbox3</title>
+    <link rel="stylesheet" href="css/flex-style.css">
+    <link rel="stylesheet" href="css/16_flexbox3.css">
+</head>
+<body>
+    <h1>item 전용 속성</h1>
+    <h3>order : item이 main-axis방향으로 배치되는 순서를 지정하는 속성</h3>
+    <div class="flex-container">
+        <!--div.item.item${item$}*5-->
+        <div class="item item1 order3">item1</div>
+        <div class="item item2 order5">item2</div>
+        <div class="item item3 order4">item3</div>
+        <div class="item item4 order1">item4</div>
+        <div class="item item5 order2">item5</div>
+    </div>
+    <hr>
+    <h3>flex-grow : 팽창 정도를 지정하는 속성(기본값 0)</h3>
+    <div class="flex-container">
+        <div class="item item1 grow3">item1</div>
+        <div class="item item2 grow1">item2</div>
+        <div class="item item3 grow2">item3</div>
+        <div class="item item4 grow4">item4</div>
+    </div>
+    <hr>
+    <h3>flex-shrink : 수축 정도를 지정하는 속성(기본값 0)</h3>
+    <div class="flex-container">
+        <div class="item item1 shrink0">item1</div>
+        <div class="item item2 shrink1">item2</div>
+        <div class="item item3 shrink2">item3</div>
+        <div class="item item4 shrink3">item4</div>
+    </div>
+    <hr>
+    <h3>flex-basis : item의 기본 크기를 지정하는 속성</h3>
+    <div class="flex-container">
+        <div class="item item1 b-150px">item1</div>
+        <div class="item item2 b-10p">item2</div>
+        <div class="item item3 b-25p">item3</div>
+        <div class="item item4 flex-1">item4</div>
+    </div>
+    <hr>
+    <h3>align-self : 각 item별로 교차축 배치를 지정하는 속성</h3>
+    <div class="flex-container">
+        <div class="item item1 start">item1</div>
+        <div class="item item2 center">item2</div>
+        <div class="item item3 end">item3</div>
+    </div>
+</body>
+</html>
