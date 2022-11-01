@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색창</title>
+    <style>
+        *{box-sizing: border-box;}
+
+        .search-area{width:500px;}
+        .search-area fieldset{
+            border:2px solid #455ba8;
+            padding: 2px;
+            margin: 0;
+            border-radius:5px;
+            display: flex;
+        }
+        /*검색어 입력 상자*/
+        #query{
+            border:0; /*== border:none;*/
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            outline: none ; /*input요소가 포커스 일 때 바깥선*/
+            width:92%;
+        }
+        /*검색 버튼*/
+        #search-btn{
+            width: 8%;
+            border:none;
+            background-color: white;
+            font-size: 1.2em; /*icon은 특수문자 취급되어 글자, 글꼴 스타일 적용 가능*/
+            color: #455ba8;
+            cursor: pointer;
+        }
+    </style>
+    <!--fontawesome사이트 이용-->
+    <script src="https://kit.fontawesome.com/f7459b8054.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <article class="search-area">
+        <!--내부 input 태그의 값을 서버 또는 페이지로 전달(제출)-->
+        <form action="#">
+            <fieldset>
+                <input type="text" id="query" name="query" placeholder="검색어를 입력해주세요.">
+                <button type="submit" id="search-btn" class="fa-solid fa-magnifying-glass">
+                    <!--<i class="fa-solid fa-magnifying-glass"></i>-->
+                </button>
+            </fieldset>
+        </form>
+    </article>
+</body>
+</html>

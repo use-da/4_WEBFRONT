@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이게이터</title>
+    <style>
+        *{box-sizing: border-box;}
+        nav, li{border: 1px solid black;}
+        nav{
+            width:1140px;
+            height: 50px;    
+        }
+
+        nav > ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            display: flex;
+            height: 100%;
+        }
+
+        nav li{
+            width:150px; /*==flex-basis: 150px;*/
+        }
+
+        nav li > a{
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+            border-radius: 5px;
+            transition-duration: 0.3s;
+            display: block;
+            height: 100%;
+            padding: 11px 0;
+            text-align: center;
+            /*
+            내부 작성된 글자를 요소 취급하여 가운데 정렬
+            display:flex;
+            justify-content: center;
+            align-items: center;*/
+        }
+        /*a가 inline형식이라 텍스트에 올려야 포커스된다 
+        -> block으로 바꾸면 padding에 올려도 포커스된다*/
+
+        nav li > a:hover{
+            background-color: #455ba8;
+            color: white;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">자유 게시판</a></li>
+            <li><a href="#">질문 게시판</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">1:1 문의</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

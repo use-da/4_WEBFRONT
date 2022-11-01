@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네비게이터</title>
+    <style>
+        *{ box-sizing: border-box;}
+        /*nav, li{border: 1px solid black;}*/
+        nav{
+            width:1140px;
+            height: 50px;    
+        }
+
+        nav > ul {
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+
+            display: flex;
+            height: 100%;
+        }
+
+        nav li{
+            width:150px; /*==flex-basis: 150px;*/
+        }
+
+        nav li > a{
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+            border-radius: 5px;
+            transition-duration: 0.3s;
+            display: block;
+            height: 100%;
+            padding: 11px 0;
+            text-align: center;
+        }
+
+        nav li > a:hover{
+            background-color: #455ba8;
+            color: white;
+        }
+
+        .submenu {
+        list-style: none;
+        height: 0; /*ul의 높이를 안보이게 처리*/
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        }
+
+        .submenu > li {
+        line-height: 20px;
+        background-color: #94a9ff;
+        }
+
+        .menu > li:hover {
+        background-color: #94a9ff;
+        transition-duration: 0.5s;
+        }
+
+        .menu > li:hover .submenu {
+        background-color: #94a9ff;
+        height: 220px;
+        transition-duration: 1s;
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+        <li>
+            <a href="" >공지사항</a>
+            <ul class="submenu">
+                <li><a href="">submenu01</a></li>
+                <li><a href="">submenu02</a></li>
+                <li><a href="">submenu03</a></li>
+                <li><a href="">submenu04</a></li>
+                <li><a href="">submenu05</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">자유 게시판</a>
+            <ul class="submenu">
+                <li><a href="">submenu01</a></li>
+                <li><a href="">submenu02</a></li>
+                <li><a href="">submenu03</a></li>
+                <li><a href="">submenu04</a></li>
+                <li><a href="">submenu05</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="" >질문 게시판</a>
+            <ul class="submenu">
+                <li><a href="">submenu01</a></li>
+                <li><a href="">submenu02</a></li>
+                <li><a href="">submenu03</a></li>
+                <li><a href="">submenu04</a></li>
+                <li><a href="">submenu05</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="" >FAQ</a>
+            <ul class="submenu">
+                <li><a href="">submenu01</a></li>
+                <li><a href="">submenu02</a></li>
+                <li><a href="">submenu03</a></li>
+                <li><a href="">submenu04</a></li>
+                <li><a href="">submenu05</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="" >1:1 문의</a>
+            <ul class="submenu">
+                <li><a href="">submenu01</a></li>
+                <li><a href="">submenu02</a></li>
+                <li><a href="">submenu03</a></li>
+                <li><a href="">submenu04</a></li>
+                <li><a href="">submenu05</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>
