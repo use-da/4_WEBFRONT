@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_형변환연산자</title>
+</head>
+
+<body>
+    <h1>문자열 -> 숫자</h1>
+    <pre>
+    요소의 내용 또는 값을 얻어오면 기본적으로 문자열(string)으로 인식됨
+    -> 덧셈 연산 시 '더하기' 연산이 아닌 '이어쓰기'가 되는 문제 발생
+
+    parseInt(문자열) : 소수점 이하 버림
+    "정수" -> 정수로 변환 ( "123" -> 123 )
+    "실수" -> 정수로 변환 ( "123.456" -> 123 ) 
+
+    parseFloat(문자열) :
+    "실수" -> 실수로 변환 ( "123.456" -> 123.456 )
+    "정수" -> 정수로 변환 ( "123" -> 123 )
+
+    Number(문자열) :
+    "정수" -> 정수로 변환 ( "123" -> 123 )
+    "실수" -> 실수로 변환 ( "123.456" -> 123.456 )
+    </pre>
+    <button class="btn1">형변환 확인</button>
+
+    <hr>
+    <h1>동등 비교 / 동일 비교 연산자</h1>
+    <pre>
+
+    동등 비교 연산자 : == , != 
+    값이 같으면 true, 다르면 false(자료형 관계 없음)
+    true == '1' == 1 -> true
+    false == 0
+
+    동일 비교 연산자 : === , !== 
+    값과 자료형이 모두 같으면 true, 다르면 false
+    </pre>
+
+    <hr>
+    <h1>문자열(string) 내장 함수</h1>
+    <pre>
+    string.indexOf("찾고싶은문자열")
+    : string 내에서 "찾고싶은문자열"의 시작 인덱스를 반환
+    없으면 -1 반환
+    ex) "javascript".indexOf("a") -> 01 -> 1 
+    
+    string.lastIndexOf("찾고싶은문자열")
+    : 뒤에서부터 검색해
+    string 내에서 "찾고싶은문자열"의 시작 인덱스를 반환, 없으면 -1 반환
+    ex) "javascript".lastIndexOf("a") -> 0123 -> 3
+
+    string.substring(시작 인덱스)
+    -> 문자열의 시작 인덱스부터 끝까지 잘라서 반환
+    ex) "helloworld".substring(4) -> "world"
+
+    string.substring(시작 인덱스, 반환 문자열의 마지막 인덱스)
+    -> 문자열의 시작 인덱스부터 마지막 인덱스(미포함) 전까지 잘라서 반환
+    ex) "helloworld".substring(5,8) -> "wor"
+
+    string.split("구분자") : 문자열을 "구분자"를 기준으로 나누어 배열로 반환
+    ex) const str = "김밥, 샌드위치, 라면, 파스타, 햄버거, 스테이크";
+    const arr = str.split(", ");
+    arr 출력 : (6) ['김밥', '샌드위치', '라면', '파스타', '햄버거', '스테이크']
+    
+    *문자열.split("") -> 문자열이 한 글자 모두 나누어져 배열로 반환
+    </pre>
+
+    <hr>
+    <h1>숫자 관련 내장 객체 / 내장 함수 </h1>
+    <pre>
+    숫자(number) 타입 리터럴 표기법
+    - 123(정수), 9.213(실수), Infinity(무한대), NaN(Not a Number숫자가 아님)
+
+    숫자 관련 내장 객체 : Math
+    Math.random()   : 0 이상 1미만의 난수 반환
+    Math.floor()    : 내림
+    Math.ceil()     : 올림
+    Math.round()    : 반올림
+    Math.trunc()    : 버림
+
+    숫자.toFixed(자릿수) : 숫자를 지정된 자릿수까지 반올림해서 표현
+    ex) 123.456.toFixed(2) -> 123.46
+
+    </pre>
+
+    <h4>isNaN(값)</h4>
+    <pre>
+    값이 숫자가 아니면 true, 숫자면 false
+    </pre>
+    <input type="text" id="input2"><button id="btn2">숫자인지 확인</button>
+
+    <h4>Math 내장 객체</h4>
+    <input type="text" id="input3"><button id="btn3">Math 확인</button>
+
+    <h4>Math.random() 활용하기</h4>
+    <button id="btn4">랜덤 배경색</button>
+
+
+
+
+
+
+
+
+
+    <script src="../js/08_형변환연산자.js"></script>
+</body>
+
+</html>
